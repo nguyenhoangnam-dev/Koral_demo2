@@ -41,7 +41,7 @@ function watch() {
 }
 
 function minifyImage() {
-  return src(['./src/img/*', '!./src/img/**/*.min.*'])
+  return src('./src/img/**/*')
     .pipe(newer('image/'))
     .pipe(image([
       image.gifsicle({interlaced: true}),
@@ -62,7 +62,7 @@ function minifyImage() {
 }
 
 function minifyJs() {
-  return src(['./src/js/**/*.js', '!./src/js/**/*.min.js'])
+  return src('./src/js/**/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
