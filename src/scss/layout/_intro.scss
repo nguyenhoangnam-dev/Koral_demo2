@@ -1,0 +1,172 @@
+.intro {
+  padding: {
+    top: 150px;
+    bottom: 150px;
+  }
+  display: flex;
+  justify-content: center;
+
+
+  &-sidebar {
+    width: 360px;
+    height: 620px;
+    border: 8px solid $pink;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar-content {
+    position: absolute;
+    background-color: white;
+    padding: {
+      top: 50px;
+      bottom: 50px;
+    }
+    width: 340px;
+    left: 60px;
+  }
+
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 58px;
+  }
+
+  &-content {
+    font-family: "Muli";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &-port {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 80px;
+    margin-left: 150px;
+  }
+}
+
+.port {
+  width: 310px;
+  height: 315px;
+  position: relative;
+
+  img {
+    width: 310px;
+  }
+
+  &-name {
+    position: absolute;
+    bottom: 60px;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 19px;
+    color: white;
+    padding-left: 20px;
+  }
+
+  &-position {
+    position: absolute;
+    bottom: 35px;
+    font-family: "Muli";
+    font-weight: 400;
+    font-size: 16px;
+    color:grey;
+    padding-left: 20px;
+  }
+}
+
+.intro2 {
+  padding: {
+    top: 120px;
+    bottom: 120px;
+  }
+  display: flex;
+  justify-content: center;
+
+  &-about {
+    width: 360px;
+  }
+
+  &-mission {
+    width: 360px;
+    margin: {
+      left: 60px;
+      right: 60px;
+    }
+  }
+
+  &-skill {
+    width: 360px;
+  }
+
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 30px;
+    padding-bottom: 35px;
+  }
+
+  &-content {
+    font-family: "Muli";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.intro-progress {
+  height: 32px;
+  background-color: $lightGrey;
+
+  .left-align {
+  }
+
+  .right-align {
+  }
+
+}
+
+.pg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 10px;
+    right: 10px;
+  }
+  height: 100%;
+
+  &-orange {
+    background-color: $pink;
+    width: 95%;
+
+  }
+
+  &-purple {
+    background-color: $hardPurple;
+    width: 85%;
+  }
+
+  &-green {
+    background-color: $hardGreen;
+    width: 75%;
+  }
+
+  &-blue {
+    background-color: $hardBlue;
+    width: 55%;
+  }
+}
