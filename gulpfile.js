@@ -19,11 +19,14 @@ const Fiber = require('fibers');
 function style() {
   return src('./src/scss/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass({
-        fiber           : Fiber,
-        precision       : 3,
-        errLogToConsole : true
-      }).on('error', sass.logError))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        fiber: Fiber,
+        precision: 3,
+        errLogToConsole: true
+      }).on('error', sass.logError)
+    )
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./src/css'))
     .pipe(browserSync.stream());
@@ -76,22 +79,30 @@ function minifyJs() {
 function minifyCss() {
   return src(['./src/scss/*.scss'])
     .pipe(sourcemaps.init())
-    .pipe(sass({
-        fiber           : Fiber,
-        imagePath       : '/images/',
-        precision       : 3,
-        errLogToConsole : true
-      }).on('error', sass.logError))
-      .pipe(autoprefixer())
-      .pipe(csso())
-      .pipe(rename({
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        fiber: Fiber,
+        imagePath: '/images/',
+        precision: 3,
+        errLogToConsole: true
+
+      }).on('error', sass.logError)
+    )
+    .pipe(autoprefixer())
+    .pipe(csso())
+    .pipe(
+      rename({
         suffix: '.min'
-      }))
+      })
+    )
     .pipe(sourcemaps.write('.'))
-    .pipe(size({
-      showFiles: true
-    }))
-    .pipe(dest('./docs/css'))
+    .pipe(
+      size({
+        showFiles: true
+      })
+    )
+    .pipe(dest('./docs/css'));
 }
 
 function minifyHtml() {

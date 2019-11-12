@@ -1,12 +1,12 @@
+// helper for other file
+@import 'helpers/functions';
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
 // base property
 @import 'base/reset';
 @import 'base/typography';
-
-// helper for other file
-@import 'helpers/functions';
-@import 'helpers/helpers';
-@import 'helpers/mixins';
-@import 'helpers/variables';
 
 // component for web, layout
 @import 'components/button';
@@ -14,6 +14,8 @@
 
 // layout of web
 @import 'layout/grid';
+@import 'layout/menu';
+@import 'layout/banner';
 @import 'layout/header';
 @import 'layout/footer';
 
