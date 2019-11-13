@@ -131,12 +131,6 @@
   height: 32px;
   background-color: $lightGrey;
 
-  .left-align {
-  }
-
-  .right-align {
-  }
-
 }
 
 .pg {
@@ -148,6 +142,7 @@
     right: 10px;
   }
   height: 100%;
+  color: white;
 
   &-orange {
     background-color: $pink;
@@ -168,5 +163,64 @@
   &-blue {
     background-color: $hardBlue;
     width: 55%;
+  }
+}
+
+.service {
+  padding-top: 120px;
+
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 36px;
+    padding-bottom: 90px;
+    text-align: center;
+  }
+
+  &-center {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &-opt {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    .center {
+      margin: {
+        left: 90px;
+        right: 90px;
+      }
+    }
+  }
+
+  &-item {
+    width: 330px;
+    text-align: center;
+    padding-bottom: 100px;
+    font-size: 15px;
+    color: #222025;
+  }
+}
+
+.item {
+  &-img {
+    img {
+      width: 60px;
+    }
+    padding-bottom: 30px;
+  }
+
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 20px;
+  }
+
+  &-content {
+    font-family: "Muli";
+    font-weight: 400;
+    line-height: 24px;
   }
 }

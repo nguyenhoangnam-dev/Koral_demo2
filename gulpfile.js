@@ -15,6 +15,7 @@ const htmlReplace = require('gulp-html-replace');
 const sourcemaps = require('gulp-sourcemaps');
 const newer = require('gulp-newer');
 const Fiber = require('fibers');
+const changed = require('gulp-changed');
 
 function style() {
   return src('./src/scss/*.scss')
@@ -66,18 +67,24 @@ function minifyImage() {
 
 function minifyJs() {
   return src('./src/js/**/*.js')
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+    .pipe(changed('./docs/js'))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(dest('./docs/js'))
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
+    .pipe(dest('./docs/js'));
 }
 
 function minifyCss() {
   return src(['./src/scss/*.scss'])
+    .pipe(changed('./docs/css'))
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -86,7 +93,6 @@ function minifyCss() {
         imagePath: '/images/',
         precision: 3,
         errLogToConsole: true
-
       }).on('error', sass.logError)
     )
     .pipe(autoprefixer())
@@ -107,19 +113,25 @@ function minifyCss() {
 
 function minifyHtml() {
   return src('./src/**/*.html')
-    .pipe(htmlReplace({
-      'css': 'css/main.min.css',
-      'js': 'js/index.min.js'
-    }))
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true
-    }))
-    .pipe(dest('./docs'))
+    .pipe(changed('./docs'))
+    .pipe(
+      htmlReplace({
+        css: 'css/main.min.css',
+        js: 'js/index.min.js'
+      })
+    )
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true
+      })
+    )
+    .pipe(dest('./docs'));
 }
 
 function fontCopy() {
   return src('./src/font/*')
+    .pipe(changed('./docs/font'))
     .pipe(dest('./docs/font'));
 }
 
