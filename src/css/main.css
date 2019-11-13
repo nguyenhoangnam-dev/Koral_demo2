@@ -276,6 +276,49 @@ html, body {
   font-size: 16px;
 }
 
+.contact-center {
+  height: 430px;
+  background-image: url("../../img/footer-bg.jpg");
+  background-position-y: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FA7268;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.contact-img img {
+  width: 30px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-title {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.contact-phone, .contact-address, .contact-email {
+  padding-bottom: 6px;
+}
+
 .intro {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -485,6 +528,74 @@ html, body {
   font-family: "Muli";
   font-weight: 400;
   line-height: 24px;
+}
+
+.intro3 {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.intro3-title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.intro3-ava {
+  padding-top: 50px;
+}
+
+.intro3-ava img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 21px -6px rgba(0, 0, 0, 0.57);
+  border: 2px solid white;
+}
+
+.intro3-content {
+  padding-top: 25px;
+  margin: auto;
+  font-family: "Muli";
+  font-weight: 400;
+  font-size: 20px;
+  width: 600px;
+  line-height: 35px;
+}
+
+.intro3-name {
+  padding-top: 25px;
+  font-family: "Muli";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.footer {
+  padding-top: 200px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.social-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.social-item img {
+  width: 20px;
+}
+
+.copyright {
+  padding-top: 20px;
+  font-family: "Muli";
+  font-weight: 400;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

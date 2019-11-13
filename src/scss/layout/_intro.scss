@@ -224,3 +224,50 @@
     line-height: 24px;
   }
 }
+
+.intro3 {
+  padding: {
+    top: 120px;
+    bottom: 90px;
+  }
+  text-align: center;
+
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  &-ava {
+    padding: {
+      top: 50px;
+    }
+    img {
+      border-radius: 50%;
+      box-shadow: 0px 0px 21px -6px rgba(0,0,0,0.57);
+      border: 2px solid white;
+    }
+  }
+
+  &-content {
+    padding: {
+      top: 25px;
+    }
+    margin: auto;
+    font-family: "Muli";
+    font-weight: 400;
+    font-size: 20px;
+    width: 600px;
+    line-height: 35px;
+  }
+
+  &-name {
+    padding: {
+      top: 25px;
+    }
+    font-family: "Muli";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

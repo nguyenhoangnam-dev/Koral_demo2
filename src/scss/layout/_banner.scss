@@ -197,3 +197,49 @@
 
   }
 }
+
+.contact-center {
+  height: 430px;
+  background-image: url('../../img/footer-bg.jpg');
+  background-position-y: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+
+  &-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+
+    img {
+      width: 30px;
+    }
+  }
+
+  &-item {
+    text-align: center;
+  }
+
+  &-title {
+    padding: {
+      top: 25px;
+      bottom: 25px;
+    }
+  }
+
+  &-phone, &-address, &-email {
+    padding-bottom: 6px;
+  }
+}
