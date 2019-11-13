@@ -16,6 +16,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const newer = require('gulp-newer');
 const Fiber = require('fibers');
 const changed = require('gulp-changed');
+const urlAdjuster = require('gulp-css-replace-url');
 
 function style() {
   return src('./src/scss/*.scss')
@@ -94,6 +95,11 @@ function minifyCss() {
         precision: 3,
         errLogToConsole: true
       }).on('error', sass.logError)
+    )
+    .pipe(
+      urlAdjuster({
+        replace: ['../../', '../']
+      })
     )
     .pipe(autoprefixer())
     .pipe(csso())
