@@ -43,14 +43,14 @@
   </div>
   <div class="banner">
     <div class="banner-title">hi there</div>
-    <div class="banner-subtitle">We're Koral. Amazing colorful</div>
-    <div class="banner-subtitle">WordPress theme</div>
+    <div data-aos="fade-up" class="banner-subtitle">We're Koral. Amazing colorful</div>
+    <div data-aos="fade-up" class="banner-subtitle">WordPress theme</div>
   </div>
   <div class="intro">
     <div class="intro-sidebar">
       <div class="sidebar-content">
-        <div class="intro-title">Designers Developers</div>
-        <div class="intro-content">
+        <div data-aos="fade-up" class="intro-title">Designers Developers</div>
+        <div data-aos="fade-up" class="intro-content">
           We strive to create architecture that is simple, beautiful,
           and economical of both means and gestures. We believe that
           architecture should be integral with its place and that the
@@ -60,40 +60,52 @@
       </div>
     </div>
     <div class="intro-port">
-      <div class="port blue">
-        <img src="img/team3.jpg" alt="">
-        <div class="port-name">Nina Soraia</div>
-        <div class="port-position">CTO</div>
+      <div class="port-left">
+        <div data-aos="fade-up" class="port">
+          <img src="img/team3.jpg" alt="">
+          <div class="port-opacity blue">
+            <div class="port-name">Nina Soraia</div>
+            <div class="port-position">CTO</div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="port ">
+          <img src="img/team4.jpg" alt="">
+          <div class="port-opacity green">
+            <div class="port-name">Luanda Carlos</div>
+            <div class="port-position">DESIGNER</div>
+          </div>
+        </div>
       </div>
-      <div class="port green">
-        <img src="img/team4.jpg" alt="">
-        <div class="port-name">Luanda Carlos</div>
-        <div class="port-position">DESIGNER</div>
-      </div>
-      <div class="port red">
-        <img src="img/team1.jpg" alt="">
-        <div class="port-name">Manuel Vancel</div>
-        <div class="port-position">CTO</div>
-      </div>
-      <div class="port purple">
-        <img src="img/team2.jpg" alt="">
-        <div class="port-name">Nina Soraia</div>
-        <div class="port-position">DESIGNER</div>
+      <div class="port-right">
+        <div data-aos="fade-up" class="port ">
+          <img src="img/team1.jpg" alt="">
+          <div class="port-opacity red">
+            <div class="port-name">Manuel Vancel</div>
+            <div class="port-position">CTO</div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="port ">
+          <img src="img/team2.jpg" alt="">
+          <div class="port-opacity purple">
+            <div class="port-name">Nina Soraia</div>
+            <div class="port-position">DESIGNER</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="banner2">
-    <div class="banner2-title">We Design</div>
-    <div class="banner2-title">Creative Digital</div>
-    <div class="banner2-title">Products</div>
-    <div class="banner2-button">
+    <div data-aos="fade-up" class="banner2-title">We Design</div>
+    <div data-aos="fade-up" class="banner2-title">Creative Digital</div>
+    <div data-aos="fade-up" class="banner2-title">Products</div>
+    <div data-aos="fade-up" class="banner2-button">
       PURCHASE KORAL NOW
     </div>
   </div>
   <div class="intro2">
     <div class="intro2-about">
-      <div class="intro2-title">About our agency</div>
-      <div class="intro2-content">
+      <div data-aos="fade-up" class="intro2-title">About our agency</div>
+      <div data-aos="fade-up" class="intro2-content">
         Objectively conceptualize technically sound ROI without
         web-enabled scenarios. Professionally redefine integrated
         growth strategies without synergistic information.
@@ -103,8 +115,8 @@
       </div>
     </div>
     <div class="intro2-mission">
-      <div class="intro2-title">Ours mission</div>
-      <div class="intro2-content">
+      <div data-aos="fade-up" class="intro2-title">Ours mission</div>
+      <div data-aos="fade-up" class="intro2-content">
         Objectively conceptualize technically sound ROI without
         web-enabled scenarios. Professionally redefine integrated
         growth strategies without synergistic information.
@@ -114,30 +126,30 @@
       </div>
     </div>
     <div class="intro2-skill">
-      <div class="intro2-title">Ours skills</div>
-      <div class="intro2-content flex-column">
+      <div data-aos="fade-up" class="intro2-title">Ours skills</div>
+      <div data-aos="fade-up" class="intro2-content flex-column">
         <div class="intro-progress">
           <div class="pg pg-orange">
             <span class="left-align">Development</span>
-            <span class="right-align">95%</span>
+            <span class="right-align percent">95%</span>
           </div>
         </div>
         <div class="intro-progress">
           <div class="pg pg-purple">
             <span class="left-align">Design</span>
-            <span class="right-align">85%</span>
+            <span class="right-align percent">85%</span>
           </div>
         </div>
         <div class="intro-progress">
           <div class="pg pg-green">
             <span class="left-align">Marketing</span>
-            <span class="right-align">70%</span>
+            <span class="right-align percent">70%</span>
           </div>
         </div>
         <div class="intro-progress ">
           <div class="pg pg-blue">
             <span class="left-align">Consulting</span>
-            <span class="right-align">55%</span>
+            <span class="right-align percent">55%</span>
           </div>
         </div>
       </div>
@@ -146,7 +158,7 @@
   <div class="banner3">
     <div class="banner3-title">
       <div class="banner3-const">We do</div>
-      <div class="banner3-animation">Illustrations</div>
+      <div class="banner3-animation" id="change">Illustrations</div>
     </div>
   </div>
   <div class="banner4">
@@ -206,10 +218,10 @@
     </div>
   </div>
   <div class="service">
-    <div class="service-title">Our Services</div>
+    <div data-aos="fade-up" class="service-title">Our Services</div>
     <div class="service-center">
       <div class="service-opt">
-        <div class="service-item">
+        <div data-aos="fade-up" class="service-item">
           <div class="item-img">
             <img src="img/icon/tablet.svg" alt="">
           </div>
@@ -218,7 +230,7 @@
             Flexible strategic theme areas through redefine team driven human resource
           </div>
         </div>
-        <div class="service-item center">
+        <div data-aos="fade-up" class="service-item center">
           <div class="item-img">
             <img src="img/icon/target.svg" alt="">
           </div>
@@ -227,7 +239,7 @@
             Flexible strategic theme areas through redefine team driven human resource
           </div>
         </div>
-        <div class="service-item">
+        <div data-aos="fade-up" class="service-item">
           <div class="item-img">
             <img src="img/icon/music-album.svg" alt="">
           </div>
@@ -236,7 +248,7 @@
             Flexible strategic theme areas through redefine team driven human resource
           </div>
         </div>
-        <div class="service-item">
+        <div data-aos="fade-up" class="service-item">
           <div class="item-img">
             <img src="img/icon/lifebuoy.svg" alt="">
           </div>
@@ -245,7 +257,7 @@
             Flexible strategic theme areas through redefine team driven human resource
           </div>
         </div>
-        <div class="service-item center">
+        <div data-aos="fade-up" class="service-item center">
           <div class="item-img">
             <img src="img/icon/big-data.svg" alt="">
           </div>
@@ -254,7 +266,7 @@
             Flexible strategic theme areas through redefine team driven human resource
           </div>
         </div>
-        <div class="service-item">
+        <div data-aos="fade-up" class="service-item">
           <div class="item-img">
             <img src="img/icon/image.svg" alt="">
           </div>

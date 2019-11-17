@@ -1,7 +1,7 @@
 .intro {
   padding: {
     top: 150px;
-    bottom: 150px;
+    bottom: 150px - 80px;
   }
   display: flex;
   justify-content: center;
@@ -42,21 +42,77 @@
   }
 
   &-port {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 50px;
-    grid-row-gap: 80px;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-column-gap: 50px;
+    // grid-row-gap: 80px;
     margin-left: 150px;
+    display: flex;
+
   }
 }
 
 .port {
+
   width: 310px;
   height: 315px;
+  margin-bottom: 80px;
   position: relative;
 
   img {
     width: 310px;
+  }
+
+  &-left{
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-top: 80px;
+  }
+
+  &-opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .blue {
+    background-color: $bluePurpleOp;
+    &:hover {
+      background-color: $bluePurple;
+      transition: background-color 1s;
+    }
+  }
+
+  .red {
+    background-color: $redOp;
+    &:hover {
+      background-color: $red;
+      transition: background-color 1s;
+    }
+  }
+
+  .green {
+    background-color: $greenOp;
+    &:hover {
+      background-color: $green;
+      transition: background-color 1s;
+    }
+  }
+
+  .purple {
+    background-color: $purpleOp;
+    &:hover {
+      background-color: $purple;
+      transition: background-color 1s;
+    }
   }
 
   &-name {
@@ -74,8 +130,8 @@
     bottom: 35px;
     font-family: "Muli";
     font-weight: 400;
-    font-size: 16px;
-    color:grey;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
     padding-left: 20px;
   }
 }
@@ -146,23 +202,26 @@
 
   &-orange {
     background-color: $pink;
-    width: 95%;
-
+    width: 50%;
+    transition: width 2s;
   }
 
   &-purple {
     background-color: $hardPurple;
-    width: 85%;
+    width: 50%;
+    transition: width 2s;
   }
 
   &-green {
     background-color: $hardGreen;
-    width: 75%;
+    width: 50%;
+    transition: width 2s;
   }
 
   &-blue {
     background-color: $hardBlue;
-    width: 55%;
+    width: 50%;
+    transition: width 2s;
   }
 }
 

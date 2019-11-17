@@ -57,7 +57,15 @@
     border: 2px solid $sea;
     border-radius: 30px;
     width: 250px;
+    cursor: pointer;
 
+    &:hover {
+      border: {
+        color: white;
+      }
+      background-color: white;
+      color: $pink;
+    }
   }
 }
 
