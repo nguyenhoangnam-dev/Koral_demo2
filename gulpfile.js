@@ -46,7 +46,7 @@ function watch() {
 }
 
 function minifyImage() {
-  return src('./src/img/**/*')
+  return src(['./src/img/**/*', '!./src/img/desktop.ini'])
     .pipe(newer('image/'))
     .pipe(image([
       image.gifsicle({interlaced: true}),
@@ -141,6 +141,12 @@ function fontCopy() {
     .pipe(dest('./docs/font'));
 }
 
+function libCopy() {
+  return src('./src/lib/**/*')
+    .pipe(changed('./docs/lib'))
+	.pipe(dest('./docs/lib'));
+}
+
 function cleanDist() {
   return src('./docs', { read: false })
     .pipe(clean());
@@ -157,6 +163,11 @@ exports.cleanDist = cleanDist;
 exports.default = series(cleanDist, parallel(
   minifyImage, parallel(
     minifyJs, parallel(
-      minifyCss, parallel(minifyHtml, fontCopy))
+      minifyCss, parallel(
+	    minifyHtml, parallel(
+		  fontCopy, libCopy
+	    )
+	  )
+	)
   )
 ));
